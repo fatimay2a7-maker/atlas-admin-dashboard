@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>اطلس | داشبورد مدیریتی</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#"
+        ><span class="logo">A</span
+        ><span>اطلس<small>پنل مدیریت</small></span></a
+      >
+      <div class="workspace">
+        <span class="workspace-icon">◈</span
+        ><span><b>فروشگاه آوید</b><small>فضای کاری شما</small></span
+        ><span class="chevron">⌄</span>
+      </div>
+      <p class="nav-title">منوی اصلی</p>
+      <nav>
+        <button class="nav-item active" data-page="overview">
+          ▦ <span>نمای کلی</span>
+        </button>
+        <button class="nav-item" data-page="orders">
+          ▤ <span>سفارش‌ها</span><i>۸</i>
+        </button>
+        <button class="nav-item" data-page="products">
+          ◫ <span>محصولات</span>
+        </button>
+        <button class="nav-item" data-page="customers">
+          ♙ <span>مشتریان</span>
+        </button>
+        <button class="nav-item" data-page="reports">
+          ⌁ <span>گزارش‌ها</span>
+        </button>
+      </nav>
+      <p class="nav-title settings-title">تنظیمات</p>
+      <button class="nav-item" data-page="settings">
+        ⚙ <span>تنظیمات پنل</span>
+      </button>
+      <div class="sidebar-bottom">
+        <div class="help">
+          <b>به راهنمایی نیاز دارید؟</b>
+          <p>راهنمای پنل اطلس را ببینید.</p>
+          <button id="helpBtn">مرکز راهنما ←</button>
+        </div>
+        <div class="profile">
+          <div class="avatar">م</div>
+          <span><b>مریم احمدی</b><small>مدیر فروشگاه</small></span
+          ><span class="dots">•••</span>
+        </div>
+      </div>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+    <main class="main">
+      <header class="topbar">
+        <div class="top-right">
+          <button class="icon-btn menu-toggle" id="menuToggle">☰</button
+          ><span class="crumb"
+            >صفحات <b>/</b> <strong id="breadcrumb">نمای کلی</strong></span
+          >
+        </div>
+        <div class="top-actions">
+          <label class="search"
+            >⌕ <input id="globalSearch" placeholder="جست‌وجو در پنل..." /><kbd
+              >Ctrl K</kbd
+            ></label
+          ><button class="icon-btn" id="themeToggle" title="تغییر پوسته">
+            ☾</button
+          ><button class="icon-btn" id="notificationBtn" title="اعلان‌ها">
+            ♧<i></i>
+          </button>
+          <div class="avatar">م</div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="heading">
+          <div>
+            <p class="eyebrow">سه‌شنبه، ۵ آبان ۱۴۰۵</p>
+            <h1 id="pageTitle">صبح بخیر، مریم <span>✦</span></h1>
+            <p class="muted" id="pageDesc">
+              در ادامه، خلاصه‌ای از عملکرد فروشگاه شما را می‌بینید.
+            </p>
+          </div>
+          <div class="actions">
+            <button class="btn secondary" id="exportBtn">⇩ خروجی گزارش</button
+            ><button class="btn primary" id="newOrderBtn">＋ سفارش جدید</button>
+          </div>
+        </section>
+        <section class="stats">
+          <article class="stat">
+            <div class="stat-head">
+              <span>فروش کل</span><b class="stat-icon purple">↗</b>
+            </div>
+            <strong>۱۲۸,۴۵۰,۰۰۰ <small>تومان</small></strong>
+            <div class="stat-foot">
+              <b class="positive">↑ ۱۲.۸٪</b><span>نسبت به ماه قبل</span
+              ><svg viewBox="0 0 90 30">
+                <path
+                  d="M2 23 C13 18 16 24 25 15 S39 22 48 11 S62 16 70 7 S82 12 88 3"
+                />
+              </svg>
+            </div>
+          </article>
+          <article class="stat">
+            <div class="stat-head">
+              <span>سفارش‌های ثبت‌شده</span><b class="stat-icon orange">▤</b>
+            </div>
+            <strong>۱,۸۴۲ <small>سفارش</small></strong>
+            <div class="stat-foot">
+              <b class="positive">↑ ۸.۲٪</b><span>نسبت به ماه قبل</span
+              ><svg viewBox="0 0 90 30">
+                <path
+                  d="M2 24 C12 20 17 24 25 14 S38 17 47 13 S58 20 68 8 S79 10 88 4"
+                />
+              </svg>
+            </div>
+          </article>
+          <article class="stat">
+            <div class="stat-head">
+              <span>مشتریان جدید</span><b class="stat-icon blue">♙</b>
+            </div>
+            <strong>۳۵۶ <small>نفر</small></strong>
+            <div class="stat-foot">
+              <b class="positive">↑ ۱۸.۴٪</b><span>نسبت به ماه قبل</span
+              ><svg viewBox="0 0 90 30">
+                <path
+                  d="M2 26 C12 21 17 25 27 17 S40 19 48 10 S60 15 70 9 S80 6 88 2"
+                />
+              </svg>
+            </div>
+          </article>
+          <article class="stat">
+            <div class="stat-head">
+              <span>میانگین ارزش سفارش</span><b class="stat-icon green">◉</b>
+            </div>
+            <strong>۶۹۸,۰۰۰ <small>تومان</small></strong>
+            <div class="stat-foot">
+              <b class="negative">↓ ۲.۱٪</b><span>نسبت به ماه قبل</span
+              ><svg viewBox="0 0 90 30">
+                <path
+                  d="M2 5 C12 8 18 3 26 12 S40 8 49 15 S61 12 70 19 S80 17 88 24"
+                />
+              </svg>
+            </div>
+          </article>
+        </section>
+        <section class="dashboard-grid">
+          <article class="panel sales">
+            <div class="panel-heading">
+              <div>
+                <h2>آمار فروش</h2>
+                <p class="muted">مقایسه عملکرد فروش در بازه انتخابی</p>
+              </div>
+              <select id="chartPeriod">
+                <option value="month">۶ ماه اخیر</option>
+                <option value="week">۷ روز اخیر</option>
+                <option value="year">۱۲ ماه اخیر</option>
+              </select>
+            </div>
+            <div class="legend">
+              <span><i></i> فروش امسال</span
+              ><span><i class="pale"></i> فروش سال قبل</span>
+            </div>
+            <div class="chart-wrap">
+              <div class="y-labels">
+                <span>۱۶۰ م</span><span>۱۲۰ م</span><span>۸۰ م</span
+                ><span>۴۰ م</span><span>۰</span>
+              </div>
+              <div class="chart">
+                <div class="grid-lines">
+                  <i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <svg
+                  viewBox="0 0 600 220"
+                  preserveAspectRatio="none"
+                  aria-label="نمودار فروش"
+                >
+                  <defs>
+                    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+                      <stop
+                        offset="0"
+                        stop-color="#7667f8"
+                        stop-opacity=".24"
+                      />
+                      <stop offset="1" stop-color="#7667f8" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    class="area"
+                    d="M0 165 C35 155 45 120 85 135 S145 145 170 105 S230 130 260 85 S320 100 350 65 S410 90 435 48 S500 70 530 35 S575 45 600 15 L600 220 L0 220Z"
+                  />
+                  <path
+                    class="line"
+                    d="M0 165 C35 155 45 120 85 135 S145 145 170 105 S230 130 260 85 S320 100 350 65 S410 90 435 48 S500 70 530 35 S575 45 600 15"
+                  />
+                </svg>
+                <div class="x-labels" id="chartLabels">
+                  <span>اردیبهشت</span><span>خرداد</span><span>تیر</span
+                  ><span>مرداد</span><span>شهریور</span><span>مهر</span>
+                </div>
+              </div>
+            </div>
+            <div class="chart-foot">
+              <span>مجموع فروش این دوره</span
+              ><b id="chartTotal">۸۲۴,۶۰۰,۰۰۰ تومان</b
+              ><em class="positive">↑ ۱۲.۸٪</em>
+            </div>
+          </article>
+          <article class="panel channels">
+            <div class="panel-heading">
+              <div>
+                <h2>منابع فروش</h2>
+                <p class="muted">نحوه آشنایی مشتریان</p>
+              </div>
+              <button class="dots-btn">•••</button>
+            </div>
+            <div class="donut-wrap">
+              <div class="donut">
+                <div><b>۱,۸۴۲</b><small>کل سفارش‌ها</small></div>
+              </div>
+            </div>
+            <div class="channel-list">
+              <div>
+                <span><i class="c-purple"></i> وب‌سایت</span><b>۴۸٪</b>
+              </div>
+              <div>
+                <span><i class="c-blue"></i> اینستاگرام</span><b>۲۷٪</b>
+              </div>
+              <div>
+                <span><i class="c-orange"></i> معرفی دوستان</span><b>۱۵٪</b>
+              </div>
+              <div>
+                <span><i class="c-gray"></i> سایر موارد</span><b>۱۰٪</b>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="panel orders-panel" id="ordersSection">
+          <div class="panel-heading orders-heading">
+            <div>
+              <h2>آخرین سفارش‌ها</h2>
+              <p class="muted">وضعیت جدیدترین سفارش‌های فروشگاه</p>
+            </div>
+            <div class="table-tools">
+              <label class="table-search"
+                >⌕
+                <input
+                  id="orderSearch"
+                  placeholder="جست‌وجوی سفارش..." /></label
+              ><select id="statusFilter">
+                <option value="all">همه وضعیت‌ها</option>
+                <option value="completed">تکمیل‌شده</option>
+                <option value="pending">در انتظار</option>
+                <option value="cancelled">لغوشده</option></select
+              ><button class="link-btn" id="viewAllBtn">مشاهده همه ←</button>
+            </div>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th><input type="checkbox" id="selectAll" /></th>
+                  <th>شماره سفارش</th>
+                  <th>مشتری</th>
+                  <th>تاریخ</th>
+                  <th>مبلغ سفارش</th>
+                  <th>وضعیت</th>
+                  <th>عملیات</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTable"></tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <span id="tableInfo"></span>
+            <div class="pagination">
+              <button id="prevPage" disabled>›</button
+              ><button class="page active" id="pageOne">۱</button
+              ><button class="page" id="pageTwo">۲</button
+              ><button id="nextPage">‹</button>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <span>© ۱۴۰۵ اطلس. تمام حقوق محفوظ است.</span
+          ><span>ساخته‌شده با <b>♥</b> برای نمونه‌کار فرانت‌اند</span>
+        </footer>
+      </div>
+    </main>
+    <div class="toast" id="toast" role="status"></div>
+    <dialog id="orderDialog">
+      <form method="dialog">
+        <button class="close" value="cancel">×</button>
+        <div class="modal-icon">＋</div>
+        <h2>ثبت سفارش جدید</h2>
+        <p class="muted">اطلاعات سفارش آزمایشی را وارد کنید.</p>
+        <label
+          >نام مشتری<input
+            id="customerName"
+            required
+            placeholder="مثلاً نگار رضایی" /></label
+        ><label
+          >مبلغ سفارش (تومان)<input
+            id="orderAmount"
+            type="number"
+            min="1"
+            required
+            placeholder="مثلاً 850000"
+        /></label>
+        <div class="modal-actions">
+          <button class="btn secondary" value="cancel">انصراف</button
+          ><button class="btn primary" id="saveOrderBtn" value="default">
+            ثبت سفارش
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
